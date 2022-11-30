@@ -1,0 +1,195 @@
+@import 'meyer-reset.css';
+
+/* SETUP */
+* {
+    box-sizing: border-box;
+}
+
+header, footer, main {
+
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a, li a, h2 a, h3 a {
+    display: inline-block;
+    color: var(--color);
+    text-decoration: underline;
+}
+
+.picture1 {
+   display: block; 
+}
+
+/* Nav */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f2a37;
+    color: #efefef;
+    max-height: 4em;
+    min-height: 4em;
+}
+
+#h2nav {
+    display: inline;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+#navright li {
+    display: inline-block;
+    text-decoration: none;
+    float: right;
+    padding: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #efefef;
+    
+}
+
+#navright li a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+#navright li a:hover {
+    color: #3a82f6;
+}
+
+/* STRUCTURE */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.inner-column {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    display: block;
+    padding: 10px;
+    width: 98%;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Settings */
+
+html {
+    --black: #333;
+    --white: #efefef;
+    --color: magenta;
+    --dark: #1f2a37;
+    --light: lightblue;
+}
+
+/* DEV STYLES */
+
+/* body * {
+    border: 1px solid blue;
+    padding: 2px;
+} */
+
+/* TYPOGRAPHY */
+.cstmfont {
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: .9;
+}
+@media (min-width: 700px) {
+    .cstmfont {
+        font-size: 40px;
+        
+    }
+}
+
+header .inner-column {
+    padding: 10px;
+}
+
+.cstmfont2 {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+
+/* COMPONENTS */
+.button {
+    font-family: sans-serif;
+    display: inline-block;
+    background-color: #3a82f6;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.6em 1em;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+/* MODULES */
+
+.graphic {
+    display: block;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.graphic .text-content {
+    display: block;
+}
+
+.graphic .text-content p {
+    margin-top: 10px;
+}
+
+.graphic .text-content .button {
+    margin-top: 10px;
+}
+
+.graphic .picture {
+
+}
+
+@media (min-width: 700px) {
+    .graphic {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+    }
+    .graphic :is(.text-content, .picture) {
+        flex-basis: 50%;
+        border: 1px solid blue;
+    }
+}
+
+
+.welcome {
+    background-color: var(--dark);
+    color: var(--white);
+}
